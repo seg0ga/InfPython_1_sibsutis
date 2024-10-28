@@ -12,6 +12,5 @@ while len(s) != 0:
     else:
         alpha.append(s[0])
     s.pop(0)
-print(digit)
-print(alpha)
-print(s)
+print(" ".join(digit))
+print(" ".join(alpha))
