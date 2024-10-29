@@ -1,10 +1,7 @@
-s = []
 digit = []
 alpha = []
-a = "1"
-while a != "":
-    a = input()
-    if a != "" :s.append(a)
+
+s = input().split()
 
 while len(s) != 0:
     if str(s[0]).isdigit():
