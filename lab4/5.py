@@ -1,9 +1,8 @@
 z = int(input())
+s_1 = input().split()
 s = []
-a = "1"
-while a != "":
-    a = input()
-    if a != "" :s.append(int(a))
+for  i in s_1:
+    s.append(int(i))
 s.append(z)
 s.sort()
 k = len(s)
