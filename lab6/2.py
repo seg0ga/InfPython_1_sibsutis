@@ -11,10 +11,12 @@ for i in k2:
     if "Academy" in i:
         flag6 = 1
 
-if flag5 == 1:
-    print("В пятом")
+if flag5 == 1 and flag6 == 1:
+    print("В обоих")
 elif flag6 == 1:
     print("В шестом")
+elif flag5 == 1:
+    print("В пятом")
 else:
     print("В файлах нет слова")
 e1.close()
