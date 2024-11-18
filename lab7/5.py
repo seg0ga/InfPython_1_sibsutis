@@ -3,7 +3,7 @@ import PySimpleGUI as sg
 sg.theme("DarkTeal12")
 layout = [
     [sg.Text("Эрудит",justification="center",font="10px")],
-    [sg.Image(filename="C:/Users/Prora/PycharmProjects/SibSUTIS/seventh practice/aboba.png",subsample=2)],
+    [sg.Image(filename="aboba.png",subsample=2)],
     [sg.Text("Введите слово:",expand_x=True,auto_size_text=True,justification="center",font="15px")],
     [sg.InputText(size=20,font="13px")],
     [sg.Button("Подсчет очков",key="-function-",size=30,font="15px")],
