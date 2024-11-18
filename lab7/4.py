@@ -4,7 +4,7 @@ import random as r
 sg.theme("GreenMono")
 layout = [
     [sg.Text("Генератор оценок по физике",justification="center",font="10px")],
-    [sg.Image(filename="C:/Users/Prora/PycharmProjects/SibSUTIS/seventh practice/tenor.png",subsample=2)],
+    [sg.Image(filename="tenor.png",subsample=2)],
     [sg.Text("  Левый предел",expand_x=True,auto_size_text=True,justification="left",font="15px"),sg.Text("Правый предел",font="15px",expand_x=True,justification="right")],
     [sg.InputText(size=14,font="13px"), sg.InputText(size=14,font="13px")],
     [sg.Button("Генерация",key="-function-",size=30,font="15px")],
