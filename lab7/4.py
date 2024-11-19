@@ -17,10 +17,13 @@ while True:
     if event == sg.WIN_CLOSED:
         break
     elif event == "-function-":
-        if (str(values[1]).isdigit()==False) or (str(values[2]).isdigit()==False) or (int(values[1])>int(values[2])):
-            window["-text-"].update(f"Неверное значение")
-        else:
-            rand = r.randint(int(values[1]), int(values[2]))
-            window["-text-"].update(f"Результат: {rand}")
+        try:
+            if (int(values[1])>int(values[2])):
+                window["-text-"].update(f"Неверное значение")
+            else:
+                rand = r.randint(int(values[1]), int(values[2]))
+                window["-text-"].update(f"Результат: {rand}")
+        except ValueError:
+            window["-text-"].update(f"Ошибка")
 
 window.close()
