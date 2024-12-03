@@ -21,11 +21,18 @@ if event == sg.WIN_CLOSED:
 else:
     try:
         count=int(values["count"])
+        if count <= 0:
+            flag = False
+            window.close()
+            zzz = sg.popup("Неверные данные", font=("Arial", 20, "bold"), button_justification="center",
+                           custom_text="И ЧО?")
     except ValueError:
         flag=False
         window.close()
         zzz = sg.popup("Неверные данные", font=("Arial", 20, "bold"), button_justification="center", custom_text="И ЧО?")
     user=values["user"]
+
+
 window.close()
 
 if flag==True:
@@ -44,7 +51,6 @@ if flag==True:
         [sg.Text("СЧЕТ" ,font=("Arial", 40,"bold"))],
         [sg.Text(f"PC vs {user}" ,font=("Arial", 25,"bold"))],
         [sg.Text("0:0" ,font=("Arial", 25,"bold"),key="schet")],
-        [sg.Text("" ,font=("Arial", 25,"bold"))],
         [sg.Button(" ", image_data= paper_base64, font="Arial 20")],
         [sg.Button("  ", image_data= rock_base64, font="Arial 20")],
         [sg.Button("   ", image_data= scissors_base64, font="Arial 20")],]
